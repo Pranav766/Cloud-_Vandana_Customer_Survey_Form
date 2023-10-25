@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: royalblue;
+            color: black;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .radio-group {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .suggestion-box {
+            width: 100%;
+            height: 100px;
+            border: 2px solid #000;
+        }
+
+        .hold {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container button {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .w3color {
+            color: #000;
+        }
+
+        .w2 {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .copyright p {
+            display: inline;
+        }
+
+        .cust {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="cust"><center>Customer Survey Form</center></h1>
+    <div class="container">
+        
+        <form id="survey-form">
+            <div class="hold">
+                <div id="name_email">
+                    <label for="name" class="bold-text">Name:</label>
+                    <input type="text" id="name" name="name" size="35" required>
+                </div>
+                <div>
+                    <label for="email" class="bold-text">Email:</label>
+                    <input type="email" id="email" name="email" size="35" required>
+                </div>
+            </div>
+            
+            <div>
+                <p><span class="bold-text">Is this the first time using our product?</span></p>
+                <div class="radio-group">
+                    <input type="radio" id="firstTimeYes" name="firstTime" value="Yes">
+                    <label for="firstTimeYes">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="firstTimeNo" name="firstTime" value="No">
+                    <label for="firstTimeNo">No</label>
+                </div>
+            </div>
+            <div>
+                <p><span class="bold-text">Would you suggest it to your friends and colleagues?</span></p>
+                <div class="radio-group">
+                    <input type="radio" id="suggestYes" name="suggest" value="Yes">
+                    <label for="suggestYes">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="suggestNo" name="suggest" value="No">
+                    <label for="suggestNo">No</label>
+                </div>
+            </div>
+            <div>
+                <p><span class="bold-text">How satisfied are you with our company overall?</span></p>
+                <div class="radio-group">
+                    <input type="radio" id="satisfied" name="satisfaction" value="Satisfied">
+                    <label for="satisfied">Satisfied</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="undecided" name="satisfaction" value="Undecided">
+                    <label for="undecided">Undecided</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied">
+                    <label for="unsatisfied">Unsatisfied</label>
+                </div>
+            </div>
+            <div>
+                <p><span class="bold-text">Do you have any suggestions to improve our service?</span></p>
+                <textarea id="suggestions" class="suggestion-box" name="suggestions"></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="copyright">
+        <p class="w2">@2018 Customer Survey Form. All Rights Reserved | Design By</p>
+        <p class="w3color">W3Layouts</p>
+    </div>
+</body>
+</html>
